@@ -207,5 +207,9 @@ class Daemonize(object):
         atexit.register(self.exit)
 
         self.logger.warn("Starting daemon.")
-
-        self.action(*privileged_action_result)
+        if self.action is not None:
+            self.action(*privileged_action_result)
+        else:
+            self.run()
+    def run(self):
+        raise NotImplementedError
