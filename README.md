@@ -10,6 +10,9 @@ It is tested under following Python versions:
 - 2.7
 - 3.3
 
+## modify 修改的地方
+加入run方法，当action传入None的时候，调用类内部的run方法。     
+这样，就给我们两个选择，可以传入action，则运行类外部的函数，或者不传入action，直接调用内部run方法
 
 ## Installation
 You can install it from Python Package Index (PyPI):
